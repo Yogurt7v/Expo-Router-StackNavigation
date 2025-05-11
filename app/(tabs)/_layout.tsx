@@ -3,7 +3,18 @@ import { FontAwesome } from '@expo/vector-icons';
 
 export default function TabsLayout() {
   return (
-    <Tabs>
+    <Tabs
+      screenOptions={{
+        tabBarActiveTintColor: 'blue',
+        tabBarInactiveTintColor: 'black',
+        tabBarStyle: {
+          backgroundColor: 'white',
+        },
+        tabBarLabelStyle: {
+          fontSize: 14,
+        },
+      }}
+    >
       <Tabs.Screen
         name="index"
         options={{
@@ -23,6 +34,7 @@ export default function TabsLayout() {
         options={{
           tabBarLabel: 'Profile',
           tabBarIcon: () => <FontAwesome name="user" size={24} color="black" />,
+          tabBarBadge: 5,
         }}
       />
     </Tabs>

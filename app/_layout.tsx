@@ -1,5 +1,6 @@
 import { router, Stack } from 'expo-router';
 import { Pressable, Text, View, Image } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
 
 function LogoTitle() {
   return (
@@ -13,6 +14,7 @@ function LogoTitle() {
 export default function RootLayout() {
   return (
     <>
+      <StatusBar style="light" />
       {/* <Stack>
         <Stack.Screen
           name="index"
